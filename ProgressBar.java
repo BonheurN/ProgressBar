@@ -11,12 +11,13 @@ public class ProgressBar extends JFrame implements ChangeListener{
 	JProgressBar bar;
 	ProgressBar(){
 		
-		bar= new JProgressBar();
+		bar= new JProgressBar(0,100);
 		bar.setValue(50);
 		bar.setBounds(10,100,400,50);
 		bar.setStringPainted(true);
 		bar.setFont(new Font("Consolas",Font.BOLD,20));
 		bar.setForeground(Color.RED);
+		bar.setBackground(Color.BLACK);
 		
 		add(bar);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -53,6 +54,7 @@ public class ProgressBar extends JFrame implements ChangeListener{
 			}
 			counter +=1;
 		}
+		bar.setString("Done :)");
 	}
 
 }
